@@ -1,12 +1,15 @@
 # API
 ## Users
 * /users/
+* /users/&lt;userID&gt;/courses/
+* /users/&lt;userID&gt;/jobs/
+* /users/&lt;userID&gt;/webpages/
+
 ## Courses
-* /&lt;userID&gt;/courses/
-* /&lt;userID&gt;/courses/&lt;courseID&gt;/
+* /courses/&lt;courseID&gt;/
+
 ## Jobs
-* /&lt;userID&gt;/jobs/
-* /&lt;userID&gt;/jobs/&lt;jobID&gt;/
+* /jobs/&lt;jobID&gt;/
+
 ## Webpages
-* /&lt;userID&gt;/webpages/
-* /&lt;userID&gt;/webpages/&lt;webpageID&gt;/
+* /webpages/&lt;webpageID&gt;/
