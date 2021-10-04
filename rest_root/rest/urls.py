@@ -17,10 +17,16 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from django.http import HttpResponseRedirect
 from rest_framework.authtoken.views import obtain_auth_token
-from users.views import UserView
-from courses.views import CoursesView, CourseView
-from jobs.views import JobsView
-from webpages.views import WebPagesView
+from courses.views import CourseViewSet
+from jobs.views import JobViewSet
+from webpages.views import WebPageViewSet
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register("courses", CourseViewSet)
+router.register("jobs", JobViewSet)
+router.register("webpages", WebPageViewSet)
+
 
 urlpatterns = [
     # Auth
@@ -28,19 +34,4 @@ urlpatterns = [
     path("token/", obtain_auth_token),
     re_path("^auth/$", lambda request: HttpResponseRedirect("login/")),
     path("auth/", include("rest_framework.urls")),
-
-    # Users endpoint
-    path("users/", UserView.as_view()),
-    path("users/<int:user_id>/courses/", CoursesView.as_view()),
-    path("users/<int:user_id>/jobs/", JobsView.as_view()),
-    path("users/<int:user_id>/webpages/", WebPagesView.as_view()),
-
-    # Courses endpoints
-    path("courses/<int:course_id>/", CourseView.as_view()),
-
-    # Jobs endpoints
-    path("jobs/<int:job_id>", JobsView.as_view()),
-
-    # Web page endpoints
-    path("webpages/<int:webpage_id>", WebPagesView.as_view()),
-]
+] + router.urls
