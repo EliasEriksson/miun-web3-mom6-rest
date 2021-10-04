@@ -1,0 +1,12 @@
+# API
+## Users
+* /users/
+## Courses
+* /&lt;userID&gt;/courses/
+* /&lt;userID&gt;/courses/&lt;courseID&gt;/
+## Jobs
+* /&lt;userID&gt;/jobs/
+* /&lt;userID&gt;/jobs/&lt;jobID&gt;/
+## Webpages
+* /&lt;userID&gt;/webpages/
+* /&lt;userID&gt;/webpages/&lt;webpageID&gt;/

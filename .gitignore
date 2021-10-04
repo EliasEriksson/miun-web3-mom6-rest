@@ -6,7 +6,7 @@ __pycache__/
 
 # django migrations
 **/migrations/**
-
+!**/migrations/!__init__.py
 # database credentials and django secret
 **/credentials.json
 
