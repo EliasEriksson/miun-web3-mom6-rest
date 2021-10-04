@@ -7,6 +7,9 @@ __pycache__/
 # django migrations
 **/migrations/**
 
+# database credentials and django secret
+**/credentials.json
+
 
 # C extensions
 *.so
