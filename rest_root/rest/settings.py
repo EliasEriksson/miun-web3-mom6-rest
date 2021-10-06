@@ -70,6 +70,11 @@ CORS_ALLOW_METHODS = [
     "PATCH",
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
+}
+
 ROOT_URLCONF = 'rest.urls'
 
 TEMPLATES = [
