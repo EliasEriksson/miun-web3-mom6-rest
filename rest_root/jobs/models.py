@@ -5,8 +5,8 @@ from django.utils.html import strip_tags, conditional_escape
 class Job(models.Model):
     company = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
-    startDate = models.DateTimeField()
-    endDate = models.DateTimeField()
+    startDate = models.DateField()
+    endDate = models.DateField()
 
     def __str__(self):
         return f"{self.company}: {self.title}"
