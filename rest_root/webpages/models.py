@@ -11,6 +11,6 @@ class WebPage(models.Model):
         return f"{self.title}"
 
     def save(self, *args, **kwargs):
-        self.title = strip_tags(conditional_escape(self.title))
-        self.description = strip_tags(conditional_escape(self.description))
+        self.title = strip_tags(self.title)
+        self.description = strip_tags(self.description)
         return super(WebPage, self).save(*args, **kwargs)

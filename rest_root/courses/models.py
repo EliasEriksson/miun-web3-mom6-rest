@@ -13,6 +13,6 @@ class Course(models.Model):
         return f"{self.university}: {self.name}"
 
     def save(self, *args, **kwargs):
-        self.university = conditional_escape(strip_tags(self.university))
-        self.name = conditional_escape(strip_tags(self.name))
+        self.university = strip_tags(self.university)
+        self.name = strip_tags(self.name)
         return super(Course, self).save(*args, **kwargs)

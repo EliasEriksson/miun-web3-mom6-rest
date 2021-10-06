@@ -12,6 +12,6 @@ class Job(models.Model):
         return f"{self.company}: {self.title}"
 
     def save(self, *args, **kwargs):
-        self.company = conditional_escape(strip_tags(self.company))
-        self.title = conditional_escape(strip_tags(self.title))
+        self.company = strip_tags(self.company)
+        self.title = strip_tags(self.title)
         return super(Job, self).save(*args, **kwargs)
