@@ -5,4 +5,4 @@ from .models import Job
 class JobSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Job
-        fields = "__all__"
+        fields = ["id", "company", "title", "startDate", "endDate"]

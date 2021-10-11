@@ -5,4 +5,4 @@ from .models import Course
 class CourseSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Course
-        fields = "__all__"
+        fields = ["id", "university", "name", "credit", "startDate", "endDate"]
