@@ -9,4 +9,4 @@ class WebPageViewSet(ModelViewSet):
     authentication_classes = [SessionAuthentication, TokenAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = WebPageSerializer
-    queryset = WebPage.objects.all()
+    queryset = WebPage.objects.all().order_by("order")

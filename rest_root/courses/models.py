@@ -8,6 +8,7 @@ class Course(models.Model):
     credit = models.FloatField()
     startDate = models.DateField()
     endDate = models.DateField()
+    order = models.IntegerField()
 
     def __str__(self):
         return f"{self.university}: {self.name}"

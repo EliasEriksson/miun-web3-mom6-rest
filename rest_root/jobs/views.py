@@ -9,4 +9,4 @@ class JobViewSet(ModelViewSet):
     authentication_classes = [SessionAuthentication, TokenAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = JobSerializer
-    queryset = Job.objects.all()
+    queryset = Job.objects.all().order_by("order")

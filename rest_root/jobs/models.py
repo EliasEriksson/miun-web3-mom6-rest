@@ -7,6 +7,7 @@ class Job(models.Model):
     title = models.CharField(max_length=255)
     startDate = models.DateField()
     endDate = models.DateField()
+    order = models.IntegerField()
 
     def __str__(self):
         return f"{self.company}: {self.title}"

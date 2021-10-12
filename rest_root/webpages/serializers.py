@@ -5,4 +5,4 @@ from .models import WebPage
 class WebPageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = WebPage
-        fields = ["id", "title", "description", "url"]
+        fields = ["id", "title", "description", "url", "order"]
