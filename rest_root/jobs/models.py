@@ -6,7 +6,7 @@ class Job(models.Model):
     company = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     startDate = models.DateField()
-    endDate = models.DateField()
+    endDate = models.DateField(blank=True, null=True)
     order = models.IntegerField()
 
     def __str__(self):
