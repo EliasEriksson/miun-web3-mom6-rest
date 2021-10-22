@@ -4,6 +4,10 @@ Miun Webbutveckling 3 Moment 6
 ## Host
 https://web3mom6rest.eliaseriksson.eu/
 
+## Related projects
+* https://github.com/EliasEriksson/miun-web3-mom6-admin
+* https://github.com/EliasEriksson/miun-web3-mom6-client
+
 ## Running with django development server
 The development server is not intended for production use. Instead a proper web server should be used.
 This application is hosted at https://web3mom6rest.eliaseriksson.eu/ with NGINX + uWSGI but apache2 + mod_wsgi is another option.
