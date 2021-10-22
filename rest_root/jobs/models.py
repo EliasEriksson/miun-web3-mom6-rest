@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.html import strip_tags, conditional_escape
+from django.utils.html import strip_tags
 
 
 class Job(models.Model):
