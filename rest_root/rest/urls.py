@@ -14,14 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path, include
-from django.http import HttpResponseRedirect
+from django.urls import path, include
 from rest_framework.authtoken.views import obtain_auth_token
 from courses.views import CourseViewSet
 from jobs.views import JobViewSet
 from webpages.views import WebPageViewSet
 from rest_framework.routers import DefaultRouter
 
+# create a router that registers the endpoints for the resources
 router = DefaultRouter()
 router.register("courses", CourseViewSet)
 router.register("jobs", JobViewSet)
@@ -29,9 +29,7 @@ router.register("webpages", WebPageViewSet)
 
 
 urlpatterns = [
-    # Auth
-    path('admin/', admin.site.urls),
-    path("token/", obtain_auth_token),
-    re_path("^auth/$", lambda request: HttpResponseRedirect("login/")),
-    path("auth/", include("rest_framework.urls")),
-] + router.urls
+    path('admin/', admin.site.urls),  # page for django admin
+    path("token/", obtain_auth_token),  # page for token access
+    path("auth/", include("rest_framework.urls")),  # non admin login portal
+] + router.urls  # adds all the URLs from the router

@@ -5,6 +5,12 @@ from .models import Job
 from .serializers import JobSerializer
 
 
+"""
+A ViewSet class that controls whether a user is allowed to access the Job resource
+how the Job recourse is serialized and how the Job data should be sorted
+"""
+
+
 class JobViewSet(ModelViewSet):
     authentication_classes = [SessionAuthentication, TokenAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly]

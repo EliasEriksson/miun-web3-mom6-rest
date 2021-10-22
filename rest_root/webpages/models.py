@@ -3,6 +3,11 @@ from django.utils.html import strip_tags
 
 
 class WebPage(models.Model):
+    """
+    model that represents the table in the database
+    the model can be used to interact with CRUD operations
+    on the WebPage table.
+    """
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=511)
     url = models.CharField(max_length=511)

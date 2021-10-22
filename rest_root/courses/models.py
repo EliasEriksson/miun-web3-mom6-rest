@@ -3,6 +3,11 @@ from django.utils.html import strip_tags
 
 
 class Course(models.Model):
+    """
+    model that represents the table in the database
+    the model can be used to interact with CRUD operations
+    on the Course table.
+    """
     university = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     credit = models.FloatField()
