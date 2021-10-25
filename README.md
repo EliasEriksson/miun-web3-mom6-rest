@@ -38,7 +38,22 @@ This application is hosted at https://web3mom6rest.eliaseriksson.eu/ with NGINX 
 11. Apply the migrations with `python manage.py migrate`.
 12. Run the development server with `python manage.py runserver`
 
+## Using the API
+To use the API with GET requests no authentication is required. However if you wish to preform
+modifications with PUT / POST / DELETE you are required to have an access token. 
+
+To acquire an access token send a POST request to the token endpoint with post data `username` and `password` 
+corresponding to your users username and password. It is also possible to send a JSON data with the header
+`Content-Type` set to `application/json`. If you do not have a user I need to create one for you.
+
+To make a POST / PUT / DELETE request using your token add the header `Authorization` and set it to
+`Token <your token>` where `<your token>` is replaced with your token. You also need to add the header
+`Content-Type` and set it to `application/json` if you are sending JSON data. 
+
 ## Available URIs
+* `https://web3mom5rest.eliaseriksson.eu/token/`
+  * Supported methods:
+    * POST
 * `https://web3mom5rest.eliaseriksson.eu/courses/`
   * Supported methods:
     * GET 
