@@ -36,7 +36,7 @@ This application is hosted at https://web3mom6rest.eliaseriksson.eu/ with NGINX 
 9. Change the DEBUG setting from `False` to `True` in `rest_root/rest/settings.py`.
 10. From within `rest_root/` create new migrations with `python manage.py makemigrations`.
 11. Apply the migrations with `python manage.py migrate`.
-12. Create a super user with `python manager.py createsuperuser` and follow the instructions.
+12. Create a super user with `python manage.py createsuperuser` and follow the instructions.
 13. Run the development server with `python manage.py runserver`
 
 ## Using the API
