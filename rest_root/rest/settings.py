@@ -23,7 +23,7 @@ with open(BASE_DIR.joinpath("rest").joinpath("credentials.json")) as credentials
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(u(3)b@cld1lr68#xo+ohn=0-s1@$+%$1b(e9)&ry$*ic&9q-e'
+SECRET_KEY = credentials["secret_key"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
