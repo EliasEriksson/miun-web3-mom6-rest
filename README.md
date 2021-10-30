@@ -2,7 +2,7 @@
 Miun Webbutveckling 3 Moment 6
 
 ## Host
-https://web3mom6rest.eliaseriksson.eu/
+https://web3mom6rest.eliaseriksson.io/
 
 ## Related projects
 * https://github.com/EliasEriksson/miun-web3-mom6-admin
